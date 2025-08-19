@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "esnext", // Generiše moderni JavaScript
+    "module": "esnext", // ES module
+    "declaration": true, // Generiše .d.ts fajlove
+    "outDir": "dist", // Folder za build fajlove
+    "strict": true, // Omogućava striktni TypeScript režim
+    "jsx": "react-jsx", // Podrška za JSX
+    "moduleResolution": "node", // Rešava module kao Node.js
+    "esModuleInterop": true, // Omogućava interoperabilnost sa CommonJS
+    "skipLibCheck": true, // Preskače proveru tipova u bibliotekama
+    "forceConsistentCasingInFileNames": true, // Sprečava razlike u velikim/malim slovima
+    "composite": true, // Omogućava referenciranje ovog projekta,
+    "types": ["vitest/globals", "@testing-library/jest-dom"]
+  },
+  "include": ["src", "setupTests.js"],
+  "exclude": ["node_modules", "dist"],
+}
