@@ -1,4 +1,4 @@
-export const BASE_COUNTRIES_API = 'https://restcountries.com/v3.1/region';
+export const BASE_COUNTRIES_API = 'https://restcountries.com/v3.1';
 
 export enum REGION {
   EUROPE = 'europe',
