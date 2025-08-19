@@ -20,8 +20,8 @@ describe('HomeCart component', () => {
   });
   it('should have proper background colour based on the continent', () => {
     const continent = REGION.AFRICA;
-    render(<HomeCart continent={continent}/>)
+    render(<HomeCart continent={continent} />);
 
-    expect(screen.getByText('africa')).toHaveStyle('background-color: rgb(0,0,0,0)')
-  })
+    expect(screen.getByText('africa')).toHaveStyle('background-color: rgb(0,0,0,0)');
+  });
 });
