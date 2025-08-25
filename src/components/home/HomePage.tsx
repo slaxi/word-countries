@@ -4,14 +4,16 @@ import HomeCart from '../cart/HomeCart';
 import { useFetchData } from '../../hooks/useFetchData';
 import LoaderComponent from '../loader/Loader';
 
+type RegionValue = (typeof REGION)[keyof typeof REGION];
+
 const HomePage = () => {
-  const [dataQuery, setDataQuery] = useState<string | null>(null);
-  const { data, isLoading, error } = useFetchData('region', dataQuery);
+  const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
+  const { data, isLoading, error } = useFetchData('region', selectedRegion);
   const handleCartClick = (
     e: React.MouseEvent<HTMLDivElement>,
-    continent: (typeof REGION)[keyof typeof REGION]
+    continent: RegionValue
   ) => {
-    setDataQuery(`/region/${continent}`);
+    setSelectedRegion(`/region/${continent}`);
   };
 
   if (isLoading) return <LoaderComponent />;
@@ -20,7 +22,7 @@ const HomePage = () => {
 
   return (
     <>
-      {Object.values(REGION).map((continent: (typeof REGION)[keyof typeof REGION]) => (
+      {Object.values(REGION).map((continent: RegionValue) => (
         <HomeCart
           key={continent}
           continent={continent}
