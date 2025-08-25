@@ -27,7 +27,6 @@ describe('App componenent', () => {
   it('should display the list of continents', () => {
     const headings = screen.getAllByRole('heading', { level: 2 });
 
-
     expect(headings).toHaveLength(5);
   });
 
