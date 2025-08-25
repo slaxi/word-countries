@@ -2,9 +2,9 @@ import React from 'react';
 import { CountryCard, HomeCartTitle } from './styled';
 import { THomeCart } from './types';
 
-const HomeCart = ({ continent }: THomeCart) => {
+const HomeCart = ({ continent, ...props }: THomeCart) => {
   return (
-    <CountryCard $continentBackround={continent}>
+    <CountryCard $continentBackround={continent} {...props}>
       <HomeCartTitle>{continent}</HomeCartTitle>
     </CountryCard>
   );
