@@ -7,7 +7,7 @@ export type TErrorResponse = {
 
 export const dataFetch = async (query: string | null): Promise<TCountryList[] | TErrorResponse> => {
   try {
-    const response = await fetch(`${BASE_COUNTRIES_API}${query}`);
+    const response = await fetch(`${BASE_COUNTRIES_API}${query ?? ''}`);
     if (!response || !response.ok) throw Error('Something went wrong! No data fetch!');
     const data = await response.json();
     return data as TCountryList[];
