@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import HomeCart from '../components/cart/HomeCart';
-import { REGION } from '../constans/constants';
+import { REGION } from '../constants/constants';
 
 describe('HomeCart component', () => {
   beforeEach(() => {
