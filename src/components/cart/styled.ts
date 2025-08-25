@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { REGION } from '../../constans/constants';
+import { REGION } from '../../constants/constants';
 import { R } from 'vitest/dist/chunks/environment.d.cL3nLXbE';
 import { TRegionKeys } from './types';
 

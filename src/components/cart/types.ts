@@ -1,5 +1,5 @@
 import { ComponentPropsWithRef } from 'react';
-import { REGION } from '../../constans/constants';
+import { REGION } from '../../constants/constants';
 
 export type THomeCart = ComponentPropsWithRef<'div'> & {
   continent: (typeof REGION)[keyof typeof REGION];
