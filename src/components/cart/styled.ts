@@ -25,8 +25,8 @@ const setBackgroundColor = <T extends REGION>(
 export const CountryCard = styled.div<{
   $continentBackround: (typeof REGION)[keyof typeof REGION];
 }>`
-min-width: 220px;  
-background: ${({ $continentBackround }) => setBackgroundColor($continentBackround)};
+  min-width: 220px;
+  background: ${({ $continentBackround }) => setBackgroundColor($continentBackround)};
   border-radius: 8px;
   box-shadow: 0 2px 8px ${({ $continentBackround }) => setBackgroundColor($continentBackround)};
   padding: 1.5rem;
@@ -40,11 +40,11 @@ background: ${({ $continentBackround }) => setBackgroundColor($continentBackroun
     box-shadow: 0 4px 16px ${({ $continentBackround }) => setBackgroundColor($continentBackround)};
   }
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     min-width: 100%;
     padding: 1rem;
     font-size: 0.95rem;
-}
+  }
 `;
 
 export const CountryFlag = styled.div`

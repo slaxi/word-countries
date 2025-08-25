@@ -1,0 +1,60 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App componenent > should create snapshot for the correct title 1`] = `
+<div>
+  <h1
+    class="sc-bRKDuR kiXkck"
+  >
+    World Countries
+  </h1>
+  <div
+    class="sc-hvigdm iiNBnG"
+  >
+    <div
+      class="sc-fhHczv dkCxEZ"
+    >
+      <h2
+        class="sc-kNOymR DBegv"
+      >
+        europe
+      </h2>
+    </div>
+    <div
+      class="sc-fhHczv TSzyJ"
+    >
+      <h2
+        class="sc-kNOymR DBegv"
+      >
+        america
+      </h2>
+    </div>
+    <div
+      class="sc-fhHczv eqrRPj"
+    >
+      <h2
+        class="sc-kNOymR DBegv"
+      >
+        africa
+      </h2>
+    </div>
+    <div
+      class="sc-fhHczv cWaGON"
+    >
+      <h2
+        class="sc-kNOymR DBegv"
+      >
+        asia
+      </h2>
+    </div>
+    <div
+      class="sc-fhHczv bfpKeY"
+    >
+      <h2
+        class="sc-kNOymR DBegv"
+      >
+        oceania
+      </h2>
+    </div>
+  </div>
+</div>
+`;
