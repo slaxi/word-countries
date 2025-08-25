@@ -3,7 +3,7 @@ import { dataFetch } from "../utils/dataFetch"
 
 export const useFetchData = (queryKey: string, queryString: string | null) => {
     const {data, isLoading, error} = useQuery({
-        queryKey: [queryKey],
+        queryKey: [queryKey, queryString],
         queryFn: () => dataFetch(queryString),
         enabled: !!queryString
     })

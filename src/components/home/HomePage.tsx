@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { REGION } from '../../constans/constants';
+import { REGION } from '../../constants/constants';
 import HomeCart from '../cart/HomeCart';
 import { useFetchData } from '../../hooks/useFetchData';
+import LoaderComponent from '../loader/Loader';
 
 const HomePage = () => {
   const [dataQuery, setDataQuery] = useState<string | null>(null);
@@ -13,7 +14,7 @@ const HomePage = () => {
     setDataQuery(`/region/${continent}`);
   };
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <LoaderComponent />;
   if (error) return <div>Error...</div>;
   console.log({ data });
 
