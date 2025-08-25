@@ -1,6 +1,8 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import HomeCart from '../components/cart/HomeCart';
 import { REGION } from '../constants/constants';
+import { vi } from 'vitest';
+import { useFetchData } from '../hooks/useFetchData';
 
 describe('HomeCart component', () => {
   beforeEach(() => {
@@ -25,3 +27,5 @@ describe('HomeCart component', () => {
     expect(screen.getByText('africa')).toHaveStyle('background-color: rgb(0,0,0,0)');
   });
 });
+
+
