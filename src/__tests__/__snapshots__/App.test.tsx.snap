@@ -3,58 +3,98 @@
 exports[`App componenent > should create snapshot for the correct title 1`] = `
 <div>
   <h1
+    aria-label="Welcome to app World Countries"
     class="sc-bRKDuR kiXkck"
+    tabindex="0"
   >
     World Countries
   </h1>
-  <div
-    class="sc-hvigdm iiNBnG"
-  >
-    <div
-      class="sc-fhHczv dkCxEZ"
+  <main>
+    <ul
+      aria-label="Lista regiona"
+      class="sc-kcLKEh jMUEuS"
     >
-      <h2
-        class="sc-kNOymR DBegv"
+      <li
+        class="sc-dntSTA"
       >
-        europe
-      </h2>
-    </div>
-    <div
-      class="sc-fhHczv TSzyJ"
-    >
-      <h2
-        class="sc-kNOymR DBegv"
+        <section
+          aria-label="Izaberi region europe"
+          class="sc-hvigdm unYTN"
+          tabindex="0"
+        >
+          <h2
+            class="sc-hwkwBN kbAoQM"
+            tabindex="-1"
+          >
+            europe
+          </h2>
+        </section>
+      </li>
+      <li
+        class="sc-dntSTA"
       >
-        america
-      </h2>
-    </div>
-    <div
-      class="sc-fhHczv eqrRPj"
-    >
-      <h2
-        class="sc-kNOymR DBegv"
+        <section
+          aria-label="Izaberi region america"
+          class="sc-hvigdm ftLHnp"
+          tabindex="0"
+        >
+          <h2
+            class="sc-hwkwBN kbAoQM"
+            tabindex="-1"
+          >
+            america
+          </h2>
+        </section>
+      </li>
+      <li
+        class="sc-dntSTA"
       >
-        africa
-      </h2>
-    </div>
-    <div
-      class="sc-fhHczv cWaGON"
-    >
-      <h2
-        class="sc-kNOymR DBegv"
+        <section
+          aria-label="Izaberi region africa"
+          class="sc-hvigdm iRWjqn"
+          tabindex="0"
+        >
+          <h2
+            class="sc-hwkwBN kbAoQM"
+            tabindex="-1"
+          >
+            africa
+          </h2>
+        </section>
+      </li>
+      <li
+        class="sc-dntSTA"
       >
-        asia
-      </h2>
-    </div>
-    <div
-      class="sc-fhHczv bfpKeY"
-    >
-      <h2
-        class="sc-kNOymR DBegv"
+        <section
+          aria-label="Izaberi region asia"
+          class="sc-hvigdm hqUlkF"
+          tabindex="0"
+        >
+          <h2
+            class="sc-hwkwBN kbAoQM"
+            tabindex="-1"
+          >
+            asia
+          </h2>
+        </section>
+      </li>
+      <li
+        class="sc-dntSTA"
       >
-        oceania
-      </h2>
-    </div>
-  </div>
+        <section
+          aria-label="Izaberi region oceania"
+          class="sc-hvigdm kZvbnE"
+          tabindex="0"
+        >
+          <h2
+            class="sc-hwkwBN kbAoQM"
+            tabindex="-1"
+          >
+            oceania
+          </h2>
+        </section>
+      </li>
+    </ul>
+  </main>
 </div>
 `;

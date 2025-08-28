@@ -14,6 +14,6 @@ describe('Fallback message', () => {
   it.only('should display fallback message if there is a error in data fetch', () => {
     render(<HomePage />);
 
-     expect(screen.getByText('No data found!')).toBeInTheDocument();
+    expect(screen.getByText('No data found!')).toBeInTheDocument();
   });
 });
