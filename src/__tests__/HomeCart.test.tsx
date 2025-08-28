@@ -1,8 +1,7 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import HomeCart from '../components/cart/HomeCart';
 import { REGION } from '../constants/constants';
-import { vi } from 'vitest';
-import { useFetchData } from '../hooks/useFetchData';
+import { axe } from 'jest-axe';
 
 describe('HomeCart component', () => {
   beforeEach(() => {
@@ -28,4 +27,12 @@ describe('HomeCart component', () => {
   });
 });
 
+describe('Home cart accessibility test', () => {
+  it('should not have any accessibility violations', async () => {
+    const continent = REGION.EUROPE;
+    const { container } = render(<HomeCart continent={continent} />);
+    const results = await axe(container);
 
+    expect(results).toHaveNoViolations();
+  });
+});

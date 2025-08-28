@@ -63,12 +63,6 @@ export const CountryName = styled.h2`
   text-align: center;
 `;
 
-// .card-details {
-//     font-size: 1rem;
-//     color: #555;
-//     text-align: center;
-// }
-
 export const CountryCapital = styled.p`
   font-size: 1rem;
   color: #333;
