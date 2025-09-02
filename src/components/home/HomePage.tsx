@@ -6,46 +6,33 @@ import LoaderComponent from '../loader/Loader';
 import ErrorBoundary from '../error/ErrorBoundary';
 import Fallback from '../error/Fallback';
 import { HomePageStyledList, ListItem } from './styled';
-
-type RegionValue = (typeof REGION)[keyof typeof REGION];
+import RegionCountryList from '../region-country-list/RegionCountryList';
+import ContinentsList from '../continents-list/ContinentsList';
+import { TRegionValue } from '../continents-list/types';
 
 const HomePage = () => {
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
-  const { data, isLoading, error } = useFetchData('region', selectedRegion);
-  const handleCartClick = (e: React.MouseEvent<HTMLDivElement>, continent: RegionValue) => {
+  const [showContinentsList, setShowContinentsList] = useState<boolean>(true);
+  const handleCartClick = (e: React.MouseEvent<HTMLDivElement>, continent: TRegionValue) => {
     setSelectedRegion(`/region/${continent}`);
+    setShowContinentsList((prev) => !prev);
   };
-
-  if (isLoading) return <LoaderComponent />;
-  if (error)
-    return (
-      <Fallback
-        message={
-          typeof error === 'string' ? error : 'Došlo je do greške prilikom dohvata podataka!'
-        }
-      />
-    );
 
   return (
     <main>
-      <HomePageStyledList aria-label="Lista regiona">
-        {Object.values(REGION).map((continent: RegionValue) => (
-          <ListItem key={continent}>
-            <HomeCart
-              key={continent}
-              continent={continent}
-              onClick={(e) => handleCartClick(e, continent)}
-              tabIndex={0}
-              aria-label={`Izaberi region ${continent}`}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  handleCartClick(e as any, continent);
-                }
-              }}
-            />
-          </ListItem>
-        ))}
-      </HomePageStyledList>
+      {showContinentsList && <ContinentsList handleCartClick={handleCartClick} />}
+      {selectedRegion && (
+        <>
+          <RegionCountryList region={selectedRegion} />
+          <button
+            onClick={() => {
+              setShowContinentsList((prev) => !prev);
+              setSelectedRegion(null);
+            }}>
+            Back to home page
+          </button>
+        </>
+      )}
     </main>
   );
 };
