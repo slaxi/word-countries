@@ -12,21 +12,19 @@ import { TRegionValue } from '../continents-list/types';
 
 const HomePage = () => {
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
-  const [showContinentsList, setShowContinentsList] = useState<boolean>(true);
   const handleCartClick = (e: React.MouseEvent<HTMLDivElement>, continent: TRegionValue) => {
     setSelectedRegion(`/region/${continent}`);
-    setShowContinentsList((prev) => !prev);
   };
 
   return (
     <main>
-      {showContinentsList && <ContinentsList handleCartClick={handleCartClick} />}
-      {selectedRegion && (
+      {!selectedRegion ? (
+        <ContinentsList handleCartClick={handleCartClick} />
+      ) : (
         <>
           <RegionCountryList region={selectedRegion} />
           <button
             onClick={() => {
-              setShowContinentsList((prev) => !prev);
               setSelectedRegion(null);
             }}>
             Back to home page
