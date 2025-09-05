@@ -7,3 +7,8 @@ export enum REGION {
   ASIA = 'asia',
   OCEANIA = 'oceania'
 }
+
+export enum ORDER {
+  ACS = 'Filter from A-Z',
+  DESC = 'Filter from Z-A'
+}
