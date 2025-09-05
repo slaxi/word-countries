@@ -12,7 +12,7 @@ vi.mock('../hooks/useFetchData', () => ({
 
 describe('Fallback message', () => {
   it('should display fallback message if there is a error in data fetch', () => {
-    render(<RegionCountryList region={''}/>);
+    render(<RegionCountryList region={''} />);
 
     expect(screen.getByText('No data found!')).toBeInTheDocument();
   });

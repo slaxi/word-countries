@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const DropdownContainer = styled.div`
   position: relative;
@@ -56,7 +56,7 @@ export const DropdownArrow = styled.span<{
 }>`
   margin-left: auto;
   transition: transform 0.2s ease;
-  transform: ${({ $isOpen }) => ($isOpen ? "rotate(180deg)" : "rotate(0deg)")};
+  transform: ${({ $isOpen }) => ($isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
 `;
 
 export const PlaceholderText = styled.span`

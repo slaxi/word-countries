@@ -1,4 +1,4 @@
-import { TCountryList } from "../../../types";
+import { TCountryList } from '../../../types';
 
 export type TRegionProps = {
   region: string | null;

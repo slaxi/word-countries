@@ -12,18 +12,18 @@ exports[`App componenent > should create snapshot for the correct title 1`] = `
   <main>
     <ul
       aria-label="Lista regiona"
-      class="sc-jwTyAe fzZSfg"
+      class="sc-kcLKEh dWAbVa"
     >
       <li
-        class="sc-hjsuWn"
+        class="sc-dntSTA"
       >
         <section
           aria-label="Izaberi region europe"
-          class="sc-jJLAfE cyNFWm"
+          class="sc-kvnevz gofgqO"
           tabindex="0"
         >
           <h2
-            class="sc-dntSTA jVKIGz"
+            class="sc-jaXbil cZrVBP"
             tabindex="-1"
           >
             europe
@@ -31,15 +31,15 @@ exports[`App componenent > should create snapshot for the correct title 1`] = `
         </section>
       </li>
       <li
-        class="sc-hjsuWn"
+        class="sc-dntSTA"
       >
         <section
           aria-label="Izaberi region america"
-          class="sc-jJLAfE kOMaVi"
+          class="sc-kvnevz hqPptu"
           tabindex="0"
         >
           <h2
-            class="sc-dntSTA jVKIGz"
+            class="sc-jaXbil cZrVBP"
             tabindex="-1"
           >
             america
@@ -47,15 +47,15 @@ exports[`App componenent > should create snapshot for the correct title 1`] = `
         </section>
       </li>
       <li
-        class="sc-hjsuWn"
+        class="sc-dntSTA"
       >
         <section
           aria-label="Izaberi region africa"
-          class="sc-jJLAfE ifmilU"
+          class="sc-kvnevz iJckOE"
           tabindex="0"
         >
           <h2
-            class="sc-dntSTA jVKIGz"
+            class="sc-jaXbil cZrVBP"
             tabindex="-1"
           >
             africa
@@ -63,15 +63,15 @@ exports[`App componenent > should create snapshot for the correct title 1`] = `
         </section>
       </li>
       <li
-        class="sc-hjsuWn"
+        class="sc-dntSTA"
       >
         <section
           aria-label="Izaberi region asia"
-          class="sc-jJLAfE bEbsXm"
+          class="sc-kvnevz ioXhQC"
           tabindex="0"
         >
           <h2
-            class="sc-dntSTA jVKIGz"
+            class="sc-jaXbil cZrVBP"
             tabindex="-1"
           >
             asia
@@ -79,15 +79,15 @@ exports[`App componenent > should create snapshot for the correct title 1`] = `
         </section>
       </li>
       <li
-        class="sc-hjsuWn"
+        class="sc-dntSTA"
       >
         <section
           aria-label="Izaberi region oceania"
-          class="sc-jJLAfE czGkoT"
+          class="sc-kvnevz ePsjrn"
           tabindex="0"
         >
           <h2
-            class="sc-dntSTA jVKIGz"
+            class="sc-jaXbil cZrVBP"
             tabindex="-1"
           >
             oceania

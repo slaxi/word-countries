@@ -1,12 +1,23 @@
-import React, { useState } from 'react'
-import { DropdownArrow, DropdownButton, DropdownContainer, DropdownList, DropdownListItem, PlaceholderText, SelectedText } from './styled';
+import React, { useState } from 'react';
+import {
+  DropdownArrow,
+  DropdownButton,
+  DropdownContainer,
+  DropdownList,
+  DropdownListItem,
+  PlaceholderText,
+  SelectedText
+} from './styled';
 import { TDropdownList } from './types';
 import { Overlay } from './dropdown-overlay/styled';
 
-
-
-const Dropdown = <T extends {label: string, value: string}>({ options, placeholder, isOpen, setIsOpen, onSelect }: TDropdownList<T>) => {
-//   const [isOpen, setIsOpen] = useState(false);
+const Dropdown = <T extends { label: string; value: string }>({
+  options,
+  placeholder,
+  isOpen,
+  setIsOpen,
+  onSelect
+}: TDropdownList<T>) => {
   const [selectedOption, setSelectedOption] = useState<T | null>(null);
 
   const toggleDropdown = () => setIsOpen((prev) => !prev);
@@ -18,28 +29,21 @@ const Dropdown = <T extends {label: string, value: string}>({ options, placehold
   };
 
   return (
-    <DropdownContainer>
+    <DropdownContainer data-testid="region">
       <DropdownButton onClick={toggleDropdown}>
         {selectedOption ? (
           <SelectedText>{selectedOption.label}</SelectedText>
         ) : (
-          <PlaceholderText>{placeholder || "Select an option"}</PlaceholderText>
+          <PlaceholderText>{placeholder || 'Select an option'}</PlaceholderText>
         )}
         <DropdownArrow $isOpen={isOpen}>▼</DropdownArrow>
       </DropdownButton>
       {isOpen && (
         <>
-          <Overlay
-            onClick={() => setIsOpen(false)}
-            zIndex={1}
-            background="transparent"
-          />
+          <Overlay onClick={() => setIsOpen(false)} zIndex={1} background="transparent" />
           <DropdownList>
             {options.map((option) => (
-              <DropdownListItem
-                key={option.value}
-                onClick={() => handleOptionClick(option)}
-              >
+              <DropdownListItem key={option.value} onClick={() => handleOptionClick(option)}>
                 {option.label}
               </DropdownListItem>
             ))}
@@ -50,4 +54,4 @@ const Dropdown = <T extends {label: string, value: string}>({ options, placehold
   );
 };
 
-export default Dropdown
+export default Dropdown;

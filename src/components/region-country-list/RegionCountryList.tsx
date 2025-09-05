@@ -6,11 +6,9 @@ import Fallback from '../error/Fallback';
 import Dropdown from '../dropdown/Dropdown';
 import { TCountryList } from '../../types';
 
-
-
 const RegionCountryList = ({ region }: TRegionProps) => {
   const { data, isLoading, error } = useFetchData('region', region) as TResponse;
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [initialRegionalList, setinitialRegionalList] = useState(data);
   if (isLoading) return <LoaderComponent />;
   if (error)
@@ -26,26 +24,13 @@ const RegionCountryList = ({ region }: TRegionProps) => {
   );
   const handleSelect = (option: { label: string; value: string }) => console.log(option);
   return (
-    <div style={{ position: 'relative' }}>
-      <Dropdown
-        options={filteredDataBySubregion}
-        placeholder="Select subregion"
-        onSelect={handleSelect}
-        isOpen={isDropdownOpen}
-        setIsOpen={setIsDropdownOpen}
-      />
-      {isDropdownOpen && (
-        <div
-          style={{
-            position: 'fixed',
-            inset: 0,
-            zIndex: 1,
-            background: 'transparent',
-          }}
-          onClick={() => setIsDropdownOpen(false)}
-        />
-      )}
-    </div>
+    <Dropdown
+      options={filteredDataBySubregion}
+      placeholder="Select subregion"
+      onSelect={handleSelect}
+      isOpen={isDropdownOpen}
+      setIsOpen={setIsDropdownOpen}
+    />
   );
 };
 

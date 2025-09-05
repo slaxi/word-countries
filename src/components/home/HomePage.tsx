@@ -26,7 +26,8 @@ const HomePage = () => {
           <button
             onClick={() => {
               setSelectedRegion(null);
-            }}>
+            }}
+          >
             Back to home page
           </button>
         </>
