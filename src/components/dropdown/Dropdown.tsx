@@ -16,7 +16,8 @@ const Dropdown = <T extends { label: string; value: string }>({
   placeholder,
   isOpen,
   setIsOpen,
-  onSelect
+  onSelect,
+  testId
 }: TDropdownList<T>) => {
   const [selectedOption, setSelectedOption] = useState<T | null>(null);
 
@@ -29,7 +30,7 @@ const Dropdown = <T extends { label: string; value: string }>({
   };
 
   return (
-    <DropdownContainer data-testid="region">
+    <DropdownContainer data-testid={testId}>
       <DropdownButton onClick={toggleDropdown}>
         {selectedOption ? (
           <SelectedText>{selectedOption.label}</SelectedText>

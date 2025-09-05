@@ -45,6 +45,7 @@ const RegionCountryList = ({ region }: TRegionProps) => {
         onSelect={handleFilterSelect}
         isOpen={isSubregionDropdownOpen}
         setIsOpen={setIsSubregionDropdownOpen}
+        testId='region'
       />
       <Dropdown
         options={filterDataByOrder}
@@ -52,6 +53,7 @@ const RegionCountryList = ({ region }: TRegionProps) => {
         onSelect={handleOrderSelect}
         isOpen={isOrderDropdownOpen}
         setIsOpen={setIsOrderDropdownOpen}
+        testId='subregion'
       />
       <ErrorBoundary fallbackMessage="Doslo je do greske prilikom dohvata podataka">
         {subregionName && (

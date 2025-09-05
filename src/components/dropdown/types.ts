@@ -4,6 +4,7 @@ export type TDropdownList<T> = {
   onSelect: (option: T) => void;
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  testId: string;
 };
 
 export type TDropdownOverlay = {

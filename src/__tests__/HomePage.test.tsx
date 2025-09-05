@@ -38,12 +38,21 @@ describe('Home Page component', () => {
     expect(continentCart).not.toBeInTheDocument();
   });
 
-  it('should show the dropdown list if one continent cart is selected', async () => {
+  it('should show the dropdown list for selecting subregions if one continent cart is selected', async () => {
     const continentCart = screen.getByText('europe');
 
     fireEvent.click(continentCart);
 
     const dropdownList = await screen.findByTestId('region');
+
+    expect(dropdownList).toBeInTheDocument();
+  });
+  it('should show the dropdown list for ordering countries within subregions if one continent cart is selected', async () => {
+    const continentCart = screen.getByText('europe');
+
+    fireEvent.click(continentCart);
+
+    const dropdownList = await screen.findByTestId('subregion');
 
     expect(dropdownList).toBeInTheDocument();
   });
