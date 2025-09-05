@@ -5,7 +5,7 @@ import { useFetchData } from '../../hooks/useFetchData';
 import LoaderComponent from '../loader/Loader';
 import ErrorBoundary from '../error/ErrorBoundary';
 import Fallback from '../error/Fallback';
-import { HomePageStyledList, ListItem } from './styled';
+import { Container, HomePageStyledList, ListItem } from './styled';
 import RegionCountryList from '../region-country-list/RegionCountryList';
 import ContinentsList from '../continents-list/ContinentsList';
 import { TRegionValue } from '../continents-list/types';
@@ -18,20 +18,21 @@ const HomePage = () => {
 
   return (
     <main>
-      {!selectedRegion ? (
-        <ContinentsList handleCartClick={handleCartClick} />
-      ) : (
-        <>
-          <RegionCountryList region={selectedRegion} />
-          <button
-            onClick={() => {
-              setSelectedRegion(null);
-            }}
-          >
-            Back to home page
-          </button>
-        </>
-      )}
+      <Container>
+        {!selectedRegion ? (
+          <ContinentsList handleCartClick={handleCartClick} />
+        ) : (
+          <>
+            <button
+              onClick={() => {
+                setSelectedRegion(null);
+              }}>
+              Back to home page
+            </button>
+            <RegionCountryList region={selectedRegion} />
+          </>
+        )}
+      </Container>
     </main>
   );
 };
