@@ -1,4 +1,5 @@
 export type TDropdownList<T> = {
+  id: string;
   options: T[];
   placeholder: string;
   onSelect: (option: T) => void;

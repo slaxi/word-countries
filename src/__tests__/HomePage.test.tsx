@@ -2,8 +2,6 @@ import { fireEvent, render, screen } from '@testing-library/react';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import HomePage from '../components/home/HomePage';
-import { vi } from 'vitest';
-import React from 'react';
 
 const queryClient = new QueryClient();
 const continentsList = ['europe', 'africa', 'america', 'oceania', 'asia'];
