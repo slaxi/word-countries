@@ -8,6 +8,7 @@ import { Nullable, TCountryList } from '../../types';
 import { ORDER } from '../../constants/constants';
 import FilterBySubregion from '../filters-countries-list/list-countries-by-subregion/FilterBySubregion';
 import ErrorBoundary from '../error/ErrorBoundary';
+import { Container, Label, Section, Title } from './styled';
 
 const RegionCountryList = ({ region }: TRegionProps) => {
   const { data, isLoading, error } = useFetchData('region', region) as TResponse;
@@ -38,36 +39,49 @@ const RegionCountryList = ({ region }: TRegionProps) => {
   const handleOrderSelect = (option: { label: string; value: string }) =>
     setOrderValue(option.value);
   return (
-    <>
-      <Dropdown
-        options={filteredDataBySubregion}
-        placeholder="Select subregion"
-        onSelect={handleFilterSelect}
-        isOpen={isSubregionDropdownOpen}
-        setIsOpen={setIsSubregionDropdownOpen}
-        testId='region'
-      />
-      <Dropdown
-        options={filterDataByOrder}
-        placeholder="Order countries by"
-        onSelect={handleOrderSelect}
-        isOpen={isOrderDropdownOpen}
-        setIsOpen={setIsOrderDropdownOpen}
-        testId='subregion'
-      />
+    <Section aria-labelledby="region-country-list-title" role="region">
+      <Title id="region-country-list-title">Countries by region</Title>
+      <Container role="form" aria-label="Filter zemlje po subregionu">
+        <Label htmlFor="subregion-dropdown">
+          Subregion
+        </Label>
+        <Dropdown
+          id="subregion-dropdown"
+          options={filteredDataBySubregion}
+          placeholder="Select subregion"
+          onSelect={handleFilterSelect}
+          isOpen={isSubregionDropdownOpen}
+          setIsOpen={setIsSubregionDropdownOpen}
+          testId="region"
+          aria-label="Dropdown za izbor subregiona"
+        />
+      </Container>
+      <Container role="form" aria-label="Sortiranje zemalja" style={{ marginBottom: '1rem' }}>
+        <Label htmlFor="order-dropdown">
+          Sort
+        </Label>
+        <Dropdown
+          id="order-dropdown"
+          options={filterDataByOrder}
+          placeholder="Order countries by"
+          onSelect={handleOrderSelect}
+          isOpen={isOrderDropdownOpen}
+          setIsOpen={setIsOrderDropdownOpen}
+          testId="subregion"
+          aria-label="Dropdown za sortiranje zemalja"
+        />
+      </Container>
       <ErrorBoundary fallbackMessage="Doslo je do greske prilikom dohvata podataka">
         {subregionName && (
           <FilterBySubregion subregionName={subregionName} setState={setDisplayData} />
         )}
       </ErrorBoundary>
-    </>
+    </Section>
   );
 };
 
 export default RegionCountryList;
 
 /**
- * filter by subregion
  * filter by ASC/DESC
- * Regular list
  */
