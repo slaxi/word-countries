@@ -21,9 +21,13 @@ const RegionCountryList = ({ region }: TRegionProps) => {
   const [displayData, setDisplayData] = useState<TCountryList[] | []>([]);
   const [subregionName, setSubregionName] = useState<Nullable<string>>(null);
   const [orderValue, setOrderValue] = useState<Nullable<string>>(null);
+  const [selectedSubregionName, setSelectedSubregionName] =
+    useState<Nullable<{ label: string; value: string }>>(null);
+  const [selectedOrder, setSelectedOrder] =
+    useState<Nullable<{ label: string; value: string }>>(null);
   useEffect(() => {
     if (orderValue !== null) {
-      setDisplayData(sortList(orderValue)(displayData) as TCountryList[])
+      setDisplayData(sortList(orderValue)(displayData) as TCountryList[]);
     }
   }, [orderValue]);
 
@@ -46,12 +50,12 @@ const RegionCountryList = ({ region }: TRegionProps) => {
   const handleFilterSelect = (option: { label: string; value: string }) => {
     setSubregionName(option.value);
     setOrderValue(null);
+    setSelectedOrder(null);
   };
   const handleOrderSelect = (option: { label: string; value: string }) => {
     setOrderValue(option.value);
     setSubregionName(null);
   };
-
 
   return (
     <Section aria-labelledby="region-country-list-title" role="region">
@@ -65,6 +69,8 @@ const RegionCountryList = ({ region }: TRegionProps) => {
           onSelect={handleFilterSelect}
           isOpen={isSubregionDropdownOpen}
           setIsOpen={setIsSubregionDropdownOpen}
+          optionSelected={selectedSubregionName}
+          setOptionSelected={setSelectedSubregionName}
           testId="region"
           aria-label="Dropdown za izbor subregiona"
         />
@@ -78,6 +84,8 @@ const RegionCountryList = ({ region }: TRegionProps) => {
           onSelect={handleOrderSelect}
           isOpen={isOrderDropdownOpen}
           setIsOpen={setIsOrderDropdownOpen}
+          optionSelected={selectedOrder}
+          setOptionSelected={setSelectedOrder}
           testId="subregion"
           aria-label="Dropdown za sortiranje zemalja"
         />
@@ -105,4 +113,3 @@ const RegionCountryList = ({ region }: TRegionProps) => {
 };
 
 export default RegionCountryList;
-

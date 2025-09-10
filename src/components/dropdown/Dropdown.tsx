@@ -17,14 +17,14 @@ const Dropdown = <T extends { label: string; value: string }>({
   isOpen,
   setIsOpen,
   onSelect,
+  optionSelected,
+  setOptionSelected,
   testId
 }: TDropdownList<T>) => {
-  const [selectedOption, setSelectedOption] = useState<T | null>(null);
-
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 
   const handleOptionClick = (option: T) => {
-    setSelectedOption(option);
+    setOptionSelected(option);
     setIsOpen(false);
     if (onSelect) onSelect(option);
   };
@@ -32,8 +32,8 @@ const Dropdown = <T extends { label: string; value: string }>({
   return (
     <DropdownContainer data-testid={testId}>
       <DropdownButton onClick={toggleDropdown}>
-        {selectedOption ? (
-          <SelectedText>{selectedOption.label}</SelectedText>
+        {optionSelected ? (
+          <SelectedText>{optionSelected.label}</SelectedText>
         ) : (
           <PlaceholderText>{placeholder || 'Select an option'}</PlaceholderText>
         )}

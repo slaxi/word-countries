@@ -129,13 +129,13 @@ describe('RegionCountryList', () => {
   // });
 
   it('should not have any accessibillity violations', async () => {
-    const {container} = render(
+    const { container } = render(
       <QueryClientProvider client={queryClient}>
         <RegionCountryList region="europe" />
       </QueryClientProvider>
     );
 
     const results = await axe(container);
-    expect(results).toHaveNoViolations()
-  })
+    expect(results).toHaveNoViolations();
+  });
 });
