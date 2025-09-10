@@ -10,91 +10,95 @@ exports[`App componenent > should create snapshot for the correct title 1`] = `
     World Countries
   </h1>
   <main>
-    <ul
-      aria-label="Lista regiona"
-      class="sc-kcLKEh jMUEuS"
+    <div
+      class="sc-hvigdm hJmijR"
     >
-      <li
-        class="sc-dntSTA"
+      <ul
+        aria-label="Lista regiona"
+        class="sc-fhHczv bYQLKx"
       >
-        <section
-          aria-label="Izaberi region europe"
-          class="sc-hvigdm unYTN"
-          tabindex="0"
+        <li
+          class="sc-ggWZvA"
         >
-          <h2
-            class="sc-hwkwBN kbAoQM"
-            tabindex="-1"
+          <section
+            aria-label="Izaberi region europe"
+            class="sc-gLaqbQ lafpvg"
+            tabindex="0"
           >
-            europe
-          </h2>
-        </section>
-      </li>
-      <li
-        class="sc-dntSTA"
-      >
-        <section
-          aria-label="Izaberi region america"
-          class="sc-hvigdm ftLHnp"
-          tabindex="0"
+            <h2
+              class="sc-bbbBoY qjJqh"
+              tabindex="-1"
+            >
+              europe
+            </h2>
+          </section>
+        </li>
+        <li
+          class="sc-ggWZvA"
         >
-          <h2
-            class="sc-hwkwBN kbAoQM"
-            tabindex="-1"
+          <section
+            aria-label="Izaberi region america"
+            class="sc-gLaqbQ fFZzxw"
+            tabindex="0"
           >
-            america
-          </h2>
-        </section>
-      </li>
-      <li
-        class="sc-dntSTA"
-      >
-        <section
-          aria-label="Izaberi region africa"
-          class="sc-hvigdm iRWjqn"
-          tabindex="0"
+            <h2
+              class="sc-bbbBoY qjJqh"
+              tabindex="-1"
+            >
+              america
+            </h2>
+          </section>
+        </li>
+        <li
+          class="sc-ggWZvA"
         >
-          <h2
-            class="sc-hwkwBN kbAoQM"
-            tabindex="-1"
+          <section
+            aria-label="Izaberi region africa"
+            class="sc-gLaqbQ ipqxEK"
+            tabindex="0"
           >
-            africa
-          </h2>
-        </section>
-      </li>
-      <li
-        class="sc-dntSTA"
-      >
-        <section
-          aria-label="Izaberi region asia"
-          class="sc-hvigdm hqUlkF"
-          tabindex="0"
+            <h2
+              class="sc-bbbBoY qjJqh"
+              tabindex="-1"
+            >
+              africa
+            </h2>
+          </section>
+        </li>
+        <li
+          class="sc-ggWZvA"
         >
-          <h2
-            class="sc-hwkwBN kbAoQM"
-            tabindex="-1"
+          <section
+            aria-label="Izaberi region asia"
+            class="sc-gLaqbQ ioEEsE"
+            tabindex="0"
           >
-            asia
-          </h2>
-        </section>
-      </li>
-      <li
-        class="sc-dntSTA"
-      >
-        <section
-          aria-label="Izaberi region oceania"
-          class="sc-hvigdm kZvbnE"
-          tabindex="0"
+            <h2
+              class="sc-bbbBoY qjJqh"
+              tabindex="-1"
+            >
+              asia
+            </h2>
+          </section>
+        </li>
+        <li
+          class="sc-ggWZvA"
         >
-          <h2
-            class="sc-hwkwBN kbAoQM"
-            tabindex="-1"
+          <section
+            aria-label="Izaberi region oceania"
+            class="sc-gLaqbQ fLHTRx"
+            tabindex="0"
           >
-            oceania
-          </h2>
-        </section>
-      </li>
-    </ul>
+            <h2
+              class="sc-bbbBoY qjJqh"
+              tabindex="-1"
+            >
+              oceania
+            </h2>
+          </section>
+        </li>
+      </ul>
+    </div>
   </main>
 </div>
 `;

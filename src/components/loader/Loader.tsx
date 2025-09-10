@@ -29,7 +29,7 @@ const LoaderWrapper = styled.div`
 const LoaderComponent = () => {
   return (
     <LoaderWrapper>
-      <Loader />
+      <Loader data-testid="loader" />
     </LoaderWrapper>
   );
 };

@@ -19,6 +19,7 @@ describe('Data fetch function', () => {
       population: 123456,
       area: 654321,
       flag: '🏳️',
+      flags: { png: 'dummy.png', svg: 'dummy.svg' },
       region: 'Dummy Region',
       subregion: 'Dummy Subregion',
       languages: {
@@ -32,7 +33,7 @@ describe('Data fetch function', () => {
       }
     }
   ];
-  it.only('fetches data from API successfully', async () => {
+  it('fetches data from API successfully', async () => {
     global.fetch = vi.fn(() =>
       Promise.resolve({
         ok: true,

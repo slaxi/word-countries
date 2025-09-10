@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { vi } from 'vitest';
-import HomePage from '../components/home/HomePage';
+import RegionCountryList from '../components/region-country-list/RegionCountryList';
 
 vi.mock('../hooks/useFetchData', () => ({
   useFetchData: () => ({
@@ -11,8 +11,8 @@ vi.mock('../hooks/useFetchData', () => ({
 }));
 
 describe('Fallback message', () => {
-  it.only('should display fallback message if there is a error in data fetch', () => {
-    render(<HomePage />);
+  it('should display fallback message if there is a error in data fetch', () => {
+    render(<RegionCountryList region={''} />);
 
     expect(screen.getByText('No data found!')).toBeInTheDocument();
   });
