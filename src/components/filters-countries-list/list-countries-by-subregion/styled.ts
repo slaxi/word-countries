@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const CountryCard = styled.div`
+  max-width: 350px;
   min-height: 490px;
   background: #fff;
   border-radius: 8px;
