@@ -108,6 +108,19 @@ const RegionCountryList = ({ region }: TRegionProps) => {
           />
         )}
       </ErrorBoundary>
+      <ErrorBoundary fallbackMessage="Doslo je do greske prilikom dohvata podataka">
+        {!subregionName && !orderValue && (
+          <RegularList
+            resourceName="subregionList"
+            data={data}
+            Component={
+              ListCountriesBySubregion as React.ComponentType<{
+                [key: string]: TCountryList;
+              }>
+            }
+          />
+        )}
+      </ErrorBoundary>
     </Section>
   );
 };
