@@ -13,7 +13,7 @@ import {
 const ListCountriesBySubregion = ({ subregionList }: { subregionList: TCountryList }) => {
   const { name, flags, subregion, capital, population, languages } = subregionList;
   return (
-    <CountryCard>
+    <CountryCard data-testid="subregion-country">
       <CountryFlagWrapper>
         <CountryFlag src={flags.svg} alt={`${name.common} flag`} />
       </CountryFlagWrapper>
