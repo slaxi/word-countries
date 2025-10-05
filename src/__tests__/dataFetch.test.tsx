@@ -50,7 +50,7 @@ describe('Data fetch function', () => {
     const data = await dataFetch('/region/europe');
     expect(data).toEqual(mockResponse);
     expect(fetch).toHaveBeenCalledTimes(1);
-    expect(fetch).toHaveBeenCalledWith('https://restcountries.com/v3.1/region/europe');
+    expect(fetch).toHaveBeenCalledWith('/api/v3.1/region/europe');
     expect(Array.isArray(data)).toBe(true);
   });
   it('returns error object if response from API is not successful', async () => {
