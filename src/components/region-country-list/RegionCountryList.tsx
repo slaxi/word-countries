@@ -17,7 +17,7 @@ const RegionCountryList = ({ region }: TRegionProps) => {
   const { data, isLoading, error } = useFetchData('region', region) as TResponse;
   const [isSubregionDropdownOpen, setIsSubregionDropdownOpen] = useState(false);
   const [isOrderDropdownOpen, setIsOrderDropdownOpen] = useState(false);
-  const [initialRegionalList, setinitialRegionalList] = useState<TCountryList[] | []>(data);
+
   const [displayData, setDisplayData] = useState<TCountryList[] | []>([]);
   const [subregionName, setSubregionName] = useState<Nullable<string>>(null);
   const [orderValue, setOrderValue] = useState<Nullable<string>>(null);
@@ -40,9 +40,12 @@ const RegionCountryList = ({ region }: TRegionProps) => {
         }
       />
     );
-  const filteredDataBySubregion = [...new Set(data?.slice().map((region) => region.subregion))].map(
-    (subregion) => ({ label: subregion, value: subregion })
-  );
+  if (!data || !Array.isArray(data)) {
+    return <Fallback message="Nema dostupnih podataka" />;
+  }
+  const filteredDataBySubregion = [
+    ...new Set(data?.slice().map((region) => region.subregion) || [])
+  ].map((subregion) => ({ label: subregion, value: subregion }));
   const filterDataByOrder = [
     { label: ORDER.ACS, value: 'ASC' },
     { label: ORDER.DESC, value: 'DESC' }

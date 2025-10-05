@@ -9,15 +9,15 @@ export type TErrorResponse = {
 export const dataFetch = async (query: string | null): Promise<TCountryList[] | TErrorResponse> => {
   try {
     const response = await fetch(`${BASE_COUNTRIES_API}${query ?? ''}`);
-    if (!response || !response.ok)
+    if (!response?.ok)
       return { status: response.status, message: 'Something went wrong! No data fetch!' };
     const data = await response.json();
     return data as TCountryList[];
   } catch (error) {
     console.error(error);
-    throw {
-      status: (error as unknown as TErrorResponse).status,
-      message: (error as unknown as TErrorResponse).message
+    return {
+      status: (error as TErrorResponse).status,
+      message: (error as TErrorResponse).message
     };
   }
 };

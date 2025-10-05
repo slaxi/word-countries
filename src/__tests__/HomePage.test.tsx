@@ -2,6 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import HomePage from '../components/home/HomePage';
+import * as hooks from '../hooks/useFetchData';
 
 const queryClient = new QueryClient();
 const continentsList = ['europe', 'africa', 'america', 'oceania', 'asia'];
@@ -37,6 +38,29 @@ describe('Home Page component', () => {
   });
 
   it('should show the dropdown list for selecting subregions if one continent cart is selected', async () => {
+    vi.spyOn(hooks, 'useFetchData').mockReturnValue({
+      data: [
+        {
+          region: 'Europe',
+          subregion: 'Western Europe',
+          name: {
+            common: 'France',
+            official: 'French Republic',
+            nativeName: { fra: { official: 'République française', common: 'France' } }
+          },
+          capital: ['Paris'],
+          population: 67000000,
+          area: 551695,
+          flag: '🇫🇷',
+          flags: { svg: 'https://flagcdn.com/fr.svg', png: 'https://flagcdn.com/fr.png' },
+          languages: { fra: 'French' },
+          currencies: { XPF: { name: 'CFP franc', symbol: '₣' } }
+        }
+      ],
+      isLoading: false,
+      error: null
+    });
+
     const continentCart = screen.getByText('europe');
 
     fireEvent.click(continentCart);
@@ -46,6 +70,28 @@ describe('Home Page component', () => {
     expect(dropdownList).toBeInTheDocument();
   });
   it('should show the dropdown list for ordering countries within subregions if one continent cart is selected', async () => {
+    vi.spyOn(hooks, 'useFetchData').mockReturnValue({
+      data: [
+        {
+          region: 'Europe',
+          subregion: 'Western Europe',
+          name: {
+            common: 'France',
+            official: 'French Republic',
+            nativeName: { fra: { official: 'République française', common: 'France' } }
+          },
+          capital: ['Paris'],
+          population: 67000000,
+          area: 551695,
+          flag: '🇫🇷',
+          flags: { svg: 'https://flagcdn.com/fr.svg', png: 'https://flagcdn.com/fr.png' },
+          languages: { fra: 'French' },
+          currencies: { XPF: { name: 'CFP franc', symbol: '₣' } }
+        }
+      ],
+      isLoading: false,
+      error: null
+    });
     const continentCart = screen.getByText('europe');
 
     fireEvent.click(continentCart);
