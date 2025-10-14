@@ -4,8 +4,8 @@ import { THomeCart } from './types';
 
 const HomeCart = ({ continent, ...props }: THomeCart) => {
   return (
-    <CountryCard $continentBackround={continent} {...props}>
-      <HomeCartTitle>{continent}</HomeCartTitle>
+    <CountryCard as="section" $continentBackround={continent} {...props}>
+      <HomeCartTitle tabIndex={-1}>{continent}</HomeCartTitle>
     </CountryCard>
   );
 };

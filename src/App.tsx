@@ -2,15 +2,14 @@ import { useState } from 'react';
 
 import { Title } from './styled';
 import HomePage from './components/home/HomePage';
-import { AppWrapper } from './styled';
 
 function App() {
   return (
     <>
-      <Title>World Countries</Title>
-      <AppWrapper>
-        <HomePage />
-      </AppWrapper>
+      <Title tabIndex={0} aria-label="Welcome to app World Countries">
+        World Countries
+      </Title>
+      <HomePage />
     </>
   );
 }

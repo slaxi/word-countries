@@ -275,8 +275,11 @@ export type TCountryList = Pick<
   | 'population'
   | 'area'
   | 'flag'
+  | 'flags'
   | 'region'
   | 'subregion'
   | 'languages'
   | 'currencies'
 >;
+
+export type Nullable<T> = T | null;

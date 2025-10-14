@@ -3,58 +3,102 @@
 exports[`App componenent > should create snapshot for the correct title 1`] = `
 <div>
   <h1
+    aria-label="Welcome to app World Countries"
     class="sc-bRKDuR kiXkck"
+    tabindex="0"
   >
     World Countries
   </h1>
-  <div
-    class="sc-hvigdm iiNBnG"
-  >
+  <main>
     <div
-      class="sc-fhHczv dkCxEZ"
+      class="sc-hvigdm hJmijR"
     >
-      <h2
-        class="sc-kNOymR DBegv"
+      <ul
+        aria-label="Lista regiona"
+        class="sc-fhHczv bYQLKx"
       >
-        europe
-      </h2>
+        <li
+          class="sc-ggWZvA"
+        >
+          <section
+            aria-label="Izaberi region europe"
+            class="sc-gLaqbQ lafpvg"
+            tabindex="0"
+          >
+            <h2
+              class="sc-bbbBoY qjJqh"
+              tabindex="-1"
+            >
+              europe
+            </h2>
+          </section>
+        </li>
+        <li
+          class="sc-ggWZvA"
+        >
+          <section
+            aria-label="Izaberi region america"
+            class="sc-gLaqbQ fFZzxw"
+            tabindex="0"
+          >
+            <h2
+              class="sc-bbbBoY qjJqh"
+              tabindex="-1"
+            >
+              america
+            </h2>
+          </section>
+        </li>
+        <li
+          class="sc-ggWZvA"
+        >
+          <section
+            aria-label="Izaberi region africa"
+            class="sc-gLaqbQ ipqxEK"
+            tabindex="0"
+          >
+            <h2
+              class="sc-bbbBoY qjJqh"
+              tabindex="-1"
+            >
+              africa
+            </h2>
+          </section>
+        </li>
+        <li
+          class="sc-ggWZvA"
+        >
+          <section
+            aria-label="Izaberi region asia"
+            class="sc-gLaqbQ ioEEsE"
+            tabindex="0"
+          >
+            <h2
+              class="sc-bbbBoY qjJqh"
+              tabindex="-1"
+            >
+              asia
+            </h2>
+          </section>
+        </li>
+        <li
+          class="sc-ggWZvA"
+        >
+          <section
+            aria-label="Izaberi region oceania"
+            class="sc-gLaqbQ fLHTRx"
+            tabindex="0"
+          >
+            <h2
+              class="sc-bbbBoY qjJqh"
+              tabindex="-1"
+            >
+              oceania
+            </h2>
+          </section>
+        </li>
+      </ul>
     </div>
-    <div
-      class="sc-fhHczv TSzyJ"
-    >
-      <h2
-        class="sc-kNOymR DBegv"
-      >
-        america
-      </h2>
-    </div>
-    <div
-      class="sc-fhHczv eqrRPj"
-    >
-      <h2
-        class="sc-kNOymR DBegv"
-      >
-        africa
-      </h2>
-    </div>
-    <div
-      class="sc-fhHczv cWaGON"
-    >
-      <h2
-        class="sc-kNOymR DBegv"
-      >
-        asia
-      </h2>
-    </div>
-    <div
-      class="sc-fhHczv bfpKeY"
-    >
-      <h2
-        class="sc-kNOymR DBegv"
-      >
-        oceania
-      </h2>
-    </div>
-  </div>
+  </main>
 </div>
 `;

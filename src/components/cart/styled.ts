@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 import { REGION } from '../../constants/constants';
-import { R } from 'vitest/dist/chunks/environment.d.cL3nLXbE';
-import { TRegionKeys } from './types';
 
 const setBackgroundColor = <T extends REGION>(
   continent: (typeof REGION)[keyof typeof REGION]
@@ -62,12 +60,6 @@ export const CountryName = styled.h2`
   margin-bottom: 0.5rem;
   text-align: center;
 `;
-
-// .card-details {
-//     font-size: 1rem;
-//     color: #555;
-//     text-align: center;
-// }
 
 export const CountryCapital = styled.p`
   font-size: 1rem;
