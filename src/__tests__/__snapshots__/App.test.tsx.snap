@@ -22,11 +22,11 @@ exports[`App componenent > should create snapshot for the correct title 1`] = `
         >
           <section
             aria-label="Izaberi region europe"
-            class="sc-gLaqbQ lafpvg"
+            class="sc-cOpnSz gwaJT"
             tabindex="0"
           >
             <h2
-              class="sc-bbbBoY qjJqh"
+              class="sc-pYNGo kFWCbA"
               tabindex="-1"
             >
               europe
@@ -38,11 +38,11 @@ exports[`App componenent > should create snapshot for the correct title 1`] = `
         >
           <section
             aria-label="Izaberi region america"
-            class="sc-gLaqbQ fFZzxw"
+            class="sc-cOpnSz hJcrBv"
             tabindex="0"
           >
             <h2
-              class="sc-bbbBoY qjJqh"
+              class="sc-pYNGo kFWCbA"
               tabindex="-1"
             >
               america
@@ -54,11 +54,11 @@ exports[`App componenent > should create snapshot for the correct title 1`] = `
         >
           <section
             aria-label="Izaberi region africa"
-            class="sc-gLaqbQ ipqxEK"
+            class="sc-cOpnSz gxmLVJ"
             tabindex="0"
           >
             <h2
-              class="sc-bbbBoY qjJqh"
+              class="sc-pYNGo kFWCbA"
               tabindex="-1"
             >
               africa
@@ -70,11 +70,11 @@ exports[`App componenent > should create snapshot for the correct title 1`] = `
         >
           <section
             aria-label="Izaberi region asia"
-            class="sc-gLaqbQ ioEEsE"
+            class="sc-cOpnSz DOfVz"
             tabindex="0"
           >
             <h2
-              class="sc-bbbBoY qjJqh"
+              class="sc-pYNGo kFWCbA"
               tabindex="-1"
             >
               asia
@@ -86,11 +86,11 @@ exports[`App componenent > should create snapshot for the correct title 1`] = `
         >
           <section
             aria-label="Izaberi region oceania"
-            class="sc-gLaqbQ fLHTRx"
+            class="sc-cOpnSz hTGIQi"
             tabindex="0"
           >
             <h2
-              class="sc-bbbBoY qjJqh"
+              class="sc-pYNGo kFWCbA"
               tabindex="-1"
             >
               oceania
