@@ -1,0 +1,104 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App componenent > should create snapshot for the correct title 1`] = `
+<div>
+  <h1
+    aria-label="Welcome to app World Countries"
+    class="sc-bRKDuR kiXkck"
+    tabindex="0"
+  >
+    World Countries
+  </h1>
+  <main>
+    <div
+      class="sc-hvigdm hJmijR"
+    >
+      <ul
+        aria-label="Lista regiona"
+        class="sc-fhHczv bYQLKx"
+      >
+        <li
+          class="sc-ggWZvA"
+        >
+          <section
+            aria-label="Izaberi region europe"
+            class="sc-gLaqbQ lafpvg"
+            tabindex="0"
+          >
+            <h2
+              class="sc-bbbBoY qjJqh"
+              tabindex="-1"
+            >
+              europe
+            </h2>
+          </section>
+        </li>
+        <li
+          class="sc-ggWZvA"
+        >
+          <section
+            aria-label="Izaberi region america"
+            class="sc-gLaqbQ fFZzxw"
+            tabindex="0"
+          >
+            <h2
+              class="sc-bbbBoY qjJqh"
+              tabindex="-1"
+            >
+              america
+            </h2>
+          </section>
+        </li>
+        <li
+          class="sc-ggWZvA"
+        >
+          <section
+            aria-label="Izaberi region africa"
+            class="sc-gLaqbQ ipqxEK"
+            tabindex="0"
+          >
+            <h2
+              class="sc-bbbBoY qjJqh"
+              tabindex="-1"
+            >
+              africa
+            </h2>
+          </section>
+        </li>
+        <li
+          class="sc-ggWZvA"
+        >
+          <section
+            aria-label="Izaberi region asia"
+            class="sc-gLaqbQ ioEEsE"
+            tabindex="0"
+          >
+            <h2
+              class="sc-bbbBoY qjJqh"
+              tabindex="-1"
+            >
+              asia
+            </h2>
+          </section>
+        </li>
+        <li
+          class="sc-ggWZvA"
+        >
+          <section
+            aria-label="Izaberi region oceania"
+            class="sc-gLaqbQ fLHTRx"
+            tabindex="0"
+          >
+            <h2
+              class="sc-bbbBoY qjJqh"
+              tabindex="-1"
+            >
+              oceania
+            </h2>
+          </section>
+        </li>
+      </ul>
+    </div>
+  </main>
+</div>
+`;
